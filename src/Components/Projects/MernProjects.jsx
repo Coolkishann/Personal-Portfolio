@@ -38,11 +38,11 @@ const MernProjects = () => {
           </div>
 
           <div className="my-2 flex flex-col gap-3">
-            <h3 className="text-xl text-center text-blue-900 font-medium">
+            <h3 className="text-2xl font-bold	 text-center text-blue-900">
               {title}
             </h3>
-            <p className="text-sm text-gray-900">
-              <span className="font-medium">Tech Stack:</span>
+            <p className="text-xl text-center text-gray-900">
+              <span className="font-medium ">Tech-Stack:</span>
               {techstack}
             </p>
           </div>

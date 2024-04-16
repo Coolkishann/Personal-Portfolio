@@ -24,7 +24,7 @@ const WorkExp = () => {
               </a>
             </TimelineIcon>
             <div className="flex flex-col  text-blue-900">
-              <Typography variant="h5" color="" className="font-bold">
+              <Typography variant="h5" className="font-bold">
                 C2P Ventures
               </Typography>
               <Typography className="font-bold text-gray-900 my-2" color="white">

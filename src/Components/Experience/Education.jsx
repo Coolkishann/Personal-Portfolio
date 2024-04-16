@@ -8,6 +8,8 @@ import {
   Typography,
   Avatar,
 } from "@material-tailwind/react";
+// import university from "./assets/university.png";
+
 
 const Education = () => {
   return (
@@ -19,12 +21,12 @@ const Education = () => {
             <TimelineIcon className="p-0">
               <Avatar
                 size="lg"
-                src="https://upload.wikimedia.org/wikipedia/en/7/7a/University_of_Mumbai_coat_of_arms.svg"
+                src="https://banner2.cleanpng.com/20180509/lqq/kisspng-university-of-mumbai-alkesh-dinesh-mody-institute-5af2a63dc98cd9.9610869015258517098256.jpg"
                 alt="user 1"
               />
             </TimelineIcon>
             <Typography variant="h5" className="text-blue-900">
-              Marwadi Education Foundation's Group of Institutions
+              Mumbai University
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-14">

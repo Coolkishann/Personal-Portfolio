@@ -39,8 +39,7 @@ const About = () => {
     <img
       src={PPng} loading="lazy"
       alt="Kishan Vishwakarma"
-      className="rounded-full w-40 h-40 md:w-60 md:h-60 object-cover object-center shadow-lg"
-    />
+      class="rounded-t-full rounded-b-full w-48 h-72 md:w-64 md:h-96 object-cover object-center shadow-lg"/>       
   </div>
 
           <div className="container flex text-white text-center justify-center items-center w-full md:w-1/2 h-full flex-col">
