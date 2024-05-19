@@ -7,6 +7,7 @@ import Code2pdf from "./ProjectImg/Code2pdf.png";
 import hotel from "./ProjectImg/hotel.png";
 import ChatApp from "./ProjectImg/chatapp.png";
 import audio from "./ProjectImg/audioplayr-ss.png";
+import tiny from "./ProjectImg/tiny.png";
 
 export const MernProjectData = [
   {
@@ -63,6 +64,13 @@ export const MernProjectData = [
     title: "Job Portal",
     techstack: " Html ,CSS ,JS ",
     live: "https://findyourjob.vercel.app",
+    github: "https://github.com/Coolkishann",
+  },
+  {
+    img: tiny,
+    title: "TinyOne",
+    techstack: " Html ,CSS ,JS ",
+    live: "https://tinyone-clone.netlify.app/",
     github: "https://github.com/Coolkishann",
   },
   {
