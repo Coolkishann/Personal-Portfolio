@@ -6,6 +6,7 @@ import c2p from "./ProjectImg/c2p.png";
 import Code2pdf from "./ProjectImg/Code2pdf.png";
 import hotel from "./ProjectImg/hotel.png";
 import ChatApp from "./ProjectImg/chatapp.png";
+import audio from "./ProjectImg/audioplayr-ss.png";
 
 export const MernProjectData = [
   {
@@ -23,7 +24,7 @@ export const MernProjectData = [
     github: "https://github.com/Coolkishann/Practical-Saver-Frontend",
   },
     {
-    img: ,
+    img:audio ,
     title: "Audio player",
     techstack: " Html ,Css ,Javascript",
     live: "https://jukebox-kishan.netlify.app/",
