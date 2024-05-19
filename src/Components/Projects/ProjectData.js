@@ -22,6 +22,13 @@ export const MernProjectData = [
     live: "https://prac-viva.vercel.app/",
     github: "https://github.com/Coolkishann/Practical-Saver-Frontend",
   },
+    {
+    img: ,
+    title: "Audio player",
+    techstack: " Html ,Css ,Javascript",
+    live: "https://jukebox-kishan.netlify.app/",
+    github: "https://jukebox-kishan.netlify.app/",
+  },
   {
     img: Code2pdf,
     title: "Code2PDF",
