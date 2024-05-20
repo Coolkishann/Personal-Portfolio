@@ -35,7 +35,7 @@ export const MernProjectData = [
     img: Code2pdf,
     title: "Code2PDF",
     techstack: " Html ,CSS ,JS",
-    live: "https://code2pdf.netlify.app/",
+    live: "https://code2pdf-1.netlify.app/",
     github: "https://github.com/Coolkishann/Code-2-PDF",
   },
   {
