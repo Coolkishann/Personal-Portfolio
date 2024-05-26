@@ -18,6 +18,13 @@ export const MernProjectData = [
     github: "https://github.com/Coolkishann/ChatApp-by-Kishan",
   },
   {
+    img: ToDoFusion,
+    title: "ToDoFusion",
+    techstack: " React ,Node ,Express ,MongoDB ,Tailwind CSS",
+    live: "https://todofusion.onrender.com/",
+    github: "https://github.com/Coolkishann/ToDoFusion",
+  },
+  {
     img: practical,
     title: "College Practical's Saver",
     techstack: " React, Mongo ,Express ,Node",
