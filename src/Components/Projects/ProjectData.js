@@ -8,6 +8,7 @@ import hotel from "./ProjectImg/hotel.png";
 import ChatApp from "./ProjectImg/chatapp.png";
 import audio from "./ProjectImg/audioplayr-ss.png";
 import tiny from "./ProjectImg/tiny.png";
+import ToDoFusion from "./ProjectImg/todoss.png";
 
 export const MernProjectData = [
   {
