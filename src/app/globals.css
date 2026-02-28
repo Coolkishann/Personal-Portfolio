@@ -67,7 +67,8 @@ body {
 .bricolage-grotesque-head {
   font-family: var(--font-display), "Bricolage Grotesque", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800; /* Force bold for expressive headlines */
+  font-weight: 800;
+  /* Force bold for expressive headlines */
   font-style: normal;
   letter-spacing: -0.04em;
   line-height: 0.9;
@@ -86,7 +87,21 @@ body {
 }
 
 .font-poppins {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-cta), "Poppins", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -162,6 +177,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

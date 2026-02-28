@@ -4,7 +4,7 @@ export function Footer() {
     const userName = "Hire Me";
 
     return (
-        <footer className="mt-20 pb-16 px-6 sm:px-10 lg:px-16 border-t border-zinc-900 pt-32">
+        <footer className=" pb-16 px-6 sm:px-10 lg:px-16">
             <div className="flex flex-col items-center gap-12">
 <div className="text-center group w-full">
   <TextPressure
@@ -22,7 +22,7 @@ export function Footer() {
   />
 </div>
 
-                <div className="flex justify-between w-full text-zinc-600 text-[10px] font-(--font-mono) uppercase tracking-[0.25em] mt-24 border-t border-zinc-900/50 pt-8">
+                <div className="flex justify-between w-full text-zinc-600 text-[10px] font-(--font-mono) uppercase tracking-[0.25em] mt-8 border-t border-zinc-900/50 pt-8">
                     <p>© 2026 {userName}</p>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-zinc-100 transition-all duration-300">LinkedIn</a>

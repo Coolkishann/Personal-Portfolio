@@ -18,18 +18,18 @@ const badges: PhysicsBadge[] = [
 
   {
     text: "Littlebox India",
-    emoji: "🚀",
+    // emoji: "🚀",
   },
   {
     text: "M.Des, IIT Guwahati",
   },
   {
     text: "Human–AI Interaction",
-    emoji: "🧠",
+    // emoji: "🧠",
   },
   {
     text: "2+ Years Exp",
-    emoji: "✨",
+    // emoji: "✨",
   },
   {
     text: "UI / UX Design",

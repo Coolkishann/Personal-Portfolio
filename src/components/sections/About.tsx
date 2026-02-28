@@ -13,7 +13,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="rounded-3xl bg-zinc-950/20 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16"
+      className="rounded-3xl bg-zinc-950/20 px-6 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16 overflow-hidden"
     >
       <div className="grid gap-16 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] items-start">
         <SectionHeading
@@ -44,7 +44,7 @@ export function AboutSection() {
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500 opacity-80 group-hover:text-zinc-400">
                 {stat.label}
               </p>
-              <p className="mt-4 bricolage-grotesque-head text-4xl font-extrabold text-zinc-100 group-hover:scale-105 origin-left transition-transform duration-500">
+              <p className="mt-4 font-poppins text-4xl font-extrabold text-zinc-100 group-hover:scale-105 origin-left transition-transform duration-500">
                 {stat.value}
               </p>
             </motion.div>

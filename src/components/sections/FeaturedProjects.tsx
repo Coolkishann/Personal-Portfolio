@@ -6,24 +6,64 @@ import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 
 const projects = [
   {
-    title: "Compliance cockpit for fintech ops",
-    subtitle: "Designing a calm, legible view over messy real‑world risk.",
-    meta: "2023–2025 · Product Design, UX Research",
-    tags: ["Fintech", "Risk & Compliance", "B2B SaaS"],
+    title: "Enterprise Admin Dashboard",
+    subtitle:
+      "Designing a scalable control center for analytics, user management, and operational monitoring.",
+    meta: "2024–2025 · Product Design, Frontend Development",
+    tags: ["Admin Dashboard", "Data Visualization", "SaaS"],
+    image: "/dashboard.jpg",
   },
+
   {
-    title: "Real‑estate insights microsite",
-    subtitle: "Turning dense market data into an elegant, scroll‑driven story.",
+    title: "Admin Management Portal",
+    subtitle:
+      "A role-based platform enabling secure workflows, permissions, and business automation.",
+    meta: "2024 · UX Design, System Architecture",
+    tags: ["Admin Portal", "RBAC", "Enterprise UX"],
+    image: "/admin-management.webp",
+  },
+
+  {
+    title: "QR Smart Ordering App",
+    subtitle:
+      "Contactless QR experience allowing users to browse menus, order instantly, and track status.",
+    meta: "2025 · Mobile UX, Frontend Development",
+    tags: ["QR App", "Mobile UX", "Realtime UI"],
+    image: "/qr.webp",
+  },
+
+  {
+    title: "Compliance Platform Frontend",
+    subtitle:
+      "Building a clear interface for complex compliance workflows and regulatory reporting.",
+    meta: "2024–2025 · Frontend Engineering",
+    tags: ["Fintech", "Compliance", "Dashboard UI"],
+    image: "/compilance.webp",
+  },
+
+  {
+    title: "Artisan Bakery Website",
+    subtitle:
+      "Crafting a warm, storytelling-driven brand website focused on conversion and experience.",
+    meta: "2023 · Web Design, Branding",
+    tags: ["Business Website", "Brand Design", "E-commerce"],
+    image: "/bakery.webp",
+  },
+
+  {
+    title: "Real-Estate Insights Microsite",
+    subtitle:
+      "Transforming dense property data into an elegant scroll-based storytelling experience.",
     meta: "2024 · Product Design, Web Implementation",
-    tags: ["Storytelling", "Scroll UX", "Data‑viz"],
+    tags: ["Scroll UX", "Data Visualization", "Landing Page"],
+    image: "/real-estate.webp",
   },
 ];
 
 export function FeaturedProjectsSection() {
   return (
     <section
-      id="projects"
-      className="rounded-3xl bg-zinc-950/20 px-6 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16"
+      className="rounded-3xl bg-zinc-950/20 mt-40 px-6 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16 overflow-hidden"
     >
       <div className="space-y-16">
         <SectionHeading
@@ -31,10 +71,10 @@ export function FeaturedProjectsSection() {
           title="Featured Projects"
           description="A curated selection of my favorite projects where design meets code."
         />
-
+<div className="relative">
         <ScrollStack
           className="w-full"
-          itemDistance={60}
+          itemDistance={300}
           itemScale={0.05}
           itemStackDistance={30}
           useWindowScroll={true}
@@ -42,8 +82,7 @@ export function FeaturedProjectsSection() {
           {projects.map((project, index) => (
             <ScrollStackItem key={project.title}>
               <motion.article
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+              layout
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{
                   duration: 0.8,
@@ -61,12 +100,12 @@ export function FeaturedProjectsSection() {
                       {project.title}
                     </h3>
                   </div>
-                  
-                  <p className="font-mono text-lg leading-relaxed text-zinc-400 sm:text-xl lg:text-2xl tracking-tight opacity-90">
+
+                  <p className="font-body text-lg leading-relaxed text-zinc-400 sm:text-xl lg:text-2xl tracking-tight opacity-90">
                     {project.subtitle}
                   </p>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className=" gap-6 mx-2 flex flex-wrap">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -86,14 +125,22 @@ export function FeaturedProjectsSection() {
                 <motion.div
                   className="relative aspect-4/3 w-full overflow-hidden rounded-3xl border border-zinc-900 bg-zinc-900/20 backdrop-blur-sm"
                   whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                  transition={{ type: "tween",duration: 0.25 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/[0.03] to-transparent opacity-50" />
+                  <div className="absolute inset-0  opacity-100" >  
+<img
+  src={project.image}
+  alt={project.title}
+  loading="lazy"
+  decoding="async"
+  className="w-full h-full object-cover will-change-transform"
+/></div>
                 </motion.div>
               </motion.article>
             </ScrollStackItem>
           ))}
         </ScrollStack>
+        </div>
       </div>
     </section>
   );

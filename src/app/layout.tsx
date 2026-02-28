@@ -38,7 +38,7 @@ const cta = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio · Advait Shripad Ramdasi",
+  title: "Portfolio · Kishan Vishwakarma",
   description: "Product design, UX, and web implementation portfolio.",
 };
 

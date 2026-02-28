@@ -21,8 +21,7 @@ const academicProjects = [
 export function AcademicSection() {
   return (
     <section
-      id="academic"
-      className="rounded-3xl bg-zinc-950/20 px-6 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16"
+      className="rounded-3xl bg-zinc-950/20 px-6 py-24 ring-1 ring-zinc-900 sm:px-10 lg:px-16 overflow-hidden"
     >
       <div className="space-y-16">
         <SectionHeading
@@ -51,10 +50,10 @@ export function AcademicSection() {
               className="group grid cursor-pointer items-center gap-8 py-10 sm:grid-cols-[auto_1fr_auto]"
             >
               <div className="flex items-center gap-6">
-                <span className="bricolage-grotesque-head text-2xl font-black text-zinc-800 group-hover:text-zinc-600 transition-colors">
+                <span className="font-poppins text-2xl font-black text-zinc-800 group-hover:text-zinc-600 transition-colors">
                   0{index + 1}
                 </span>
-                <span className="bricolage-grotesque-head text-2xl font-extrabold text-zinc-100 sm:text-3xl group-hover:underline decoration-zinc-800 underline-offset-8 transition-all">
+                <span className="font-poppins text-2xl font-extrabold text-zinc-100 sm:text-3xl group-hover:underline decoration-zinc-800 underline-offset-8 transition-all">
                   {project.title}
                 </span>
               </div>
