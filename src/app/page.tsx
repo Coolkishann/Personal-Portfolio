@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full">
       <HeroSection />
+      <AboutSection />
       <FeaturedProjectsSection />
       {/* <PlaygroundSection /> */}
       {/* <AcademicSection /> */}
@@ -22,7 +23,6 @@ export default function Home() {
       <ServicesSection />
       <ProductionSection />
 
-      {/* <AboutSection /> */}
       <ContactSection />
       <Footer />
     </main>

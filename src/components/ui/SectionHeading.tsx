@@ -1,43 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { ReactNode } from "react";
 
 type SectionHeadingProps = {
-  eyebrow?: string;
+  eyebrow: string;
   title: string;
-  description?: ReactNode;
-  align?: "left" | "center";
 };
 
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  align = "left",
-}: SectionHeadingProps) {
-  const isCenter = align === "center";
-
+export function SectionHeading({ eyebrow, title }: SectionHeadingProps) {
   return (
-    <motion.header
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`space-y-6 mx-24 ${isCenter ? "text-center mx-auto" : "text-left"}`}
-    >
-      {eyebrow && (
-        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-500 opacity-80">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="font-poppins text-[clamp(2rem,6vw,4rem)] font-bold leading-[0.9] tracking-[-0.04em] text-zinc-100">
-        {title}
-      </h2>
-      <div className="max-w-2xl text-lg font-medium leading-relaxed text-zinc-400 sm:text-xl lg:text-2xl tracking-tight opacity-90">
-        {description}
+    <section className="w-full py-32">
+      <div className="max-w-9xl px-8 lg:px-24">
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className=""
+        >
+          {/* LEFT — Eyebrow */}
+          <p className="
+            col-span-12 lg:col-span-3
+            font-mono
+            text-sm
+            tracking-[0.35em]
+            uppercase
+            text-white/80
+          ">
+            {eyebrow}
+          </p>
+
+          {/* RIGHT — Large Title */}
+          <h2
+            className="
+              col-span-12 lg:col-span-9
+              font-serif
+              text-white
+              text-[clamp(3rem,5vw,5.5rem)]
+              leading-[1.05]
+              tracking-[-0.02em]
+              max-w-4xl
+            "
+          >
+            {title}
+          </h2>
+        </motion.div>
+
       </div>
-    </motion.header>
+    </section>
   );
 }
-
