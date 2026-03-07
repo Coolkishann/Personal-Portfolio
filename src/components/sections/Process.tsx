@@ -140,7 +140,7 @@ export function ProcessSection() {
       {/* GRID */}
       <div
         ref={containerRef}
-        className="lg:grid lg:grid-cols-2 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16"
+        className="lg:grid lg:grid-cols-2 lg:items-start max-w-7xl mx-auto px-6 sm:px-10 lg:px-16"
       >
         {/* LEFT TEXT COLUMN */}
         <div className="relative z-10">
@@ -155,9 +155,8 @@ export function ProcessSection() {
         </div>
 
         {/* RIGHT STICKY IMAGE */}
-        <div className="hidden lg:block relative">
-          <div className="sticky top-28 flex justify-center">
-
+        <div className="hidden lg:block relative self-start">
+<div className="sticky top-1/2 -translate-y-1/2 flex justify-center">
             <div className="relative h-[620px] w-[560px] rounded-[3rem] overflow-hidden border border-zinc-800 bg-zinc-900/40 shadow-[0_40px_120px_rgba(0,0,0,0.7)]">
 
               <AnimatePresence mode="wait">
@@ -185,7 +184,7 @@ export function ProcessSection() {
             </div>
 
             {/* STEP INDICATOR */}
-            <div className="absolute right-0 space-y-4">
+            {/* <div className="absolute right-0 space-y-4">
               {steps.map((_, i) => (
                 <div
                   key={i}
@@ -196,7 +195,7 @@ export function ProcessSection() {
                   }`}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
