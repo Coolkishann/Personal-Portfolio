@@ -4,50 +4,50 @@ import { motion } from "framer-motion";
 
 type SectionHeadingProps = {
   eyebrow: string;
-  title: string;
+  title?: string;
+  description?: string;
+  align?: "left" | "center";
 };
 
-export function SectionHeading({ eyebrow, title }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, description, align = "left" }: SectionHeadingProps) {
   return (
-    <section className="w-full py-32">
-      <div className="max-w-9xl px-8 lg:px-24">
+    <div className={`w-full ${align === "center" ? "text-center" : "text-left"}`}>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="space-y-4"
+      >
+        <p className="
+          font-body
+          text-[16px]
+          tracking-[0.35em]
+          uppercase
+          text-zinc-500
+        ">
+          {eyebrow}
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className=""
-        >
-          {/* LEFT — Eyebrow */}
-          <p className="
-            col-span-12 lg:col-span-3
-            font-mono
-            text-sm
-            tracking-[0.35em]
-            uppercase
-            text-white/80
-          ">
-            {eyebrow}
+        <h2 className="
+          font-poppins
+          font-bold
+          text-white
+          text-[32px] sm:text-[56px]
+          leading-[1.05]
+          tracking-[-0.02em]
+          max-w-4xl
+          mx-auto lg:mx-0
+        ">
+          {title}
+        </h2>
+
+        {description && (
+          <p className="font-body text-[16px] sm:text-[24px] text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            {description}
           </p>
-
-          {/* RIGHT — Large Title */}
-          <h2
-            className="
-              col-span-12 lg:col-span-9
-              font-serif
-              text-white
-              text-[clamp(3rem,5vw,5.5rem)]
-              leading-[1.05]
-              tracking-[-0.02em]
-              max-w-4xl
-            "
-          >
-            {title}
-          </h2>
-        </motion.div>
-
-      </div>
-    </section>
+        )}
+      </motion.div>
+    </div>
   );
 }

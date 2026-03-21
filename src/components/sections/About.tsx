@@ -3,11 +3,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { SectionHeading } from "../ui/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const paragraph =
-  "We combine years of web design and branding expertise to craft meaningful story driven experiences.";
+  "Skilled in developing responsive interfaces and secure REST APIs using the MERN stack. Familiar with caching and systems optimization.";
 
 export function AboutSection() {
   const container = useRef<HTMLDivElement>(null);
@@ -42,24 +43,29 @@ export function AboutSection() {
   }, []);
 
   return (
-    <section
-      ref={container}
-      className="relative bg-black text-center flex justify-center items-center px-6"
-    >
-      <div className="flex items-center mx-auto justify-center min-h-screen">
+<section
+  ref={container}
+  className="relative bg-black text-center flex justify-center items-center px-6 min-h-screen"
+>
+  <div className="flex flex-col items-center justify-center mx-auto max-w-5xl">
+    
+    <SectionHeading
+      eyebrow="About"
+      // title="About Me"
+    />
 
-        <h2
-          ref={textRef}
-          className="max-w-5xl text-4xl md:text-6xl xl:text-[4.5rem] font-medium leading-[1.2] flex flex-wrap justify-center"
-        >
-          {paragraph.split(" ").map((word, i) => (
-            <span key={i} className="word mr-3">
-              {word}
-            </span>
-          ))}
-        </h2>
+<h2
+  ref={textRef}
+  className="mt-6 font-body text-[24px] md:text-[46px] xl:text-[46px] leading-relaxed text-center max-w-5xl mx-auto"
+>
+  {paragraph.split(" ").map((word, i) => (
+    <span key={i} className="word inline-block">
+      {word}&nbsp;
+    </span>
+  ))}
+</h2>
 
-      </div>
-    </section>
+  </div>
+</section>
   );
 }

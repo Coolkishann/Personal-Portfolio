@@ -268,7 +268,7 @@ export function PhysicsBadges({ labels }: Props) {
             </div>
           ) : (
             <div className="flex items-center gap-2 rounded-full border bg-black border-zinc-100 px-6 py-3 text-xs font-mono text-zinc-100">
-              <span className="text-[40px]">{badge.text}</span>
+              <span className="text-[30px]">{badge.text}</span>
               {badge.status && (
                 <span className="h-3 w-3 rounded-full bg-green-500" />
               )}

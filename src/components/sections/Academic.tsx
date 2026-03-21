@@ -5,16 +5,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const academicProjects = [
   {
-    title: "Speculative mobility UI",
-    role: "UI/UX, Systems thinking",
+    title: "B.Sc Computer Science",
+    role: "Viva College, Mumbai University",
   },
   {
-    title: "Slow‑news reading experience",
-    role: "Research, Product",
-  },
-  {
-    title: "Designing for first‑time internet users",
-    role: "Field research, Prototyping",
+    title: "Diploma in Web Development",
+    role: "Comtech IT World",
   },
 ];
 
@@ -50,14 +46,14 @@ export function AcademicSection() {
               className="group grid cursor-pointer items-center gap-8 py-10 sm:grid-cols-[auto_1fr_auto]"
             >
               <div className="flex items-center gap-6">
-                <span className="font-poppins text-2xl font-black text-zinc-800 group-hover:text-zinc-600 transition-colors">
+                <span className="font-poppins text-[32px] font-black text-zinc-800 group-hover:text-zinc-600 transition-colors">
                   0{index + 1}
                 </span>
-                <span className="font-poppins text-2xl font-extrabold text-zinc-100 sm:text-3xl group-hover:underline decoration-zinc-800 underline-offset-8 transition-all">
+                <span className="font-poppins text-[24px] sm:text-[32px] font-bold text-zinc-100 group-hover:underline decoration-zinc-800 underline-offset-8 transition-all">
                   {project.title}
                 </span>
               </div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500 opacity-80 text-right sm:text-left">
+              <p className="font-body text-[16px] uppercase tracking-[0.25em] text-zinc-500 opacity-80 text-right sm:text-left">
                 {project.role}
               </p>
               <div className="hidden sm:flex items-center justify-end">

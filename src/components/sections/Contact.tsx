@@ -25,25 +25,27 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="space-y-10 mx-auto px-6 sm:px-10 lg:px-24"
+            className="space-y-10 mx-auto "
           >
             {/* Button */}
-            <button className="group relative overflow-hidden rounded-full bg-zinc-50 px-12 py-5 text-sm font-bold uppercase tracking-[0.25em] text-black transition-all hover:scale-105 active:scale-95">
+            <button
+              onClick={() => window.open("https://drive.google.com/file/d/1i9Xe3nDtv6Xzb-oN2gwOCTob2ZMSu0iu/view?usp=drive_link", "_blank")}
+              className="group relative overflow-hidden rounded-full bg-zinc-50 px-12 py-5 font-body text-[16px] font-bold uppercase tracking-[0.25em] text-black transition-all hover:scale-105 active:scale-95">
               <span className="relative z-10">Reach out</span>
               <div className="absolute inset-0 bg-gradient-to-r from-zinc-200 to-white opacity-0 transition-opacity group-hover:opacity-100" />
             </button>
 
             {/* Email */}
             <div className="space-y-3">
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-500">
+              <p className="font-body text-[16px] uppercase tracking-[0.3em] text-zinc-500">
                 Direct Email
               </p>
 
               <a
                 href={`mailto:${email}`}
-                className="font-poppins text-2xl text-zinc-100 hover:text-white transition underline decoration-zinc-800 underline-offset-8"
+                className="font-poppins text-[24px] sm:text-[32px] text-zinc-100 hover:text-white transition underline decoration-zinc-800 underline-offset-8"
               >
-               {email}
+                {email}
               </a>
             </div>
 

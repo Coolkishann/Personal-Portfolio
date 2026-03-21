@@ -5,36 +5,36 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const projects = [
   {
-    title: "Enterprise Admin Dashboard",
+    title: "IT Management Dashboard",
     subtitle:
-      "Designing a scalable control center for analytics, user management, and operational monitoring.",
-    meta: "2024–2025 · Product Design",
-    tags: ["Admin Dashboard", "SaaS"],
+      "A scalable IT service management dashboard for handling internal service requests and operational workflows.",
+    meta: "Next.js · NestJS · PostgreSQL",
+    tags: ["State Management", "Caching", "RBAC"],
     image: "/dashboard.jpg",
   },
   {
-    title: "Admin Management Portal",
+  title: "DataEngine (CSV & PDF Processor)",
+  subtitle:
+    "A high-performance data processing engine that generates and processes large CSV and PDF files using parallel worker threads and real-time telemetry.",
+  meta: "Node.js · React · MongoDB",
+  tags: ["Worker Threads", "WebSockets", "File Processing", "Parallel Computing"],
+  image: "/dataengine.jpg",
+},
+  {
+    title: "Clinic Management System",
     subtitle:
-      "A role-based platform enabling secure workflows and business automation.",
-    meta: "2024 · UX Design",
-    tags: ["RBAC", "Enterprise UX"],
+      "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
+    meta: "React · Node.js · MongoDB",
+    tags: ["Redux", "Express", "Dynamic Workflows"],
     image: "/admin-management.webp",
   },
   {
-    title: "QR Smart Ordering App",
+    title: "Ad Listing Platform",
     subtitle:
-      "Contactless QR experience allowing instant ordering and realtime updates.",
-    meta: "2025 · Mobile UX",
-    tags: ["QR App", "Realtime UI"],
+      "A full-featured ad listing platform where users can post, browse, and manage advertisements securely.",
+    meta: "Next.js · Tailwind CSS · MongoDB",
+    tags: ["shadcn/ui", "REST API"],
     image: "/qr.webp",
-  },
-  {
-    title: "Compliance Platform Frontend",
-    subtitle:
-      "Clear interface for complex compliance workflows and reporting.",
-    meta: "2024–2025 · Frontend Engineering",
-    tags: ["Fintech", "Dashboard"],
-    image: "/compilance.webp",
   },
 ];
 
@@ -52,13 +52,13 @@ const cardVariants = {
 
 export function FeaturedProjectsSection() {
   return (
-    <section className="bg-black text-white">
+    <section className="rounded-3xl bg-zinc-950/40 px-6 py-16 ring-1 ring-zinc-900 sm:px-10 lg:px-16 overflow-hidden">
 
       {/* Heading */}
       <div className="px-6 py-32">
         <SectionHeading
           eyebrow="Projects"
-          title="Designs That Blend Creativity & Functionality"
+          title="Building Reliable Systems with Modern Technologies"
         />
       </div>
 
@@ -69,8 +69,8 @@ export function FeaturedProjectsSection() {
           variants={cardVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.35 }}
-          className=" flex items-center"
+          viewport={{ once: true, amount: 0.2 }}
+          className=" flex items-center py-16"
         >
           <div className="
       grid
@@ -88,8 +88,8 @@ lg:grid-cols-[1fr_1.3fr]
 
               {/* META */}
               <p className="
-          font-mono
-          text-sm
+          font-body
+          text-[16px]
           tracking-[0.35em]
           text-zinc-500
           uppercase
@@ -99,8 +99,9 @@ lg:grid-cols-[1fr_1.3fr]
 
               {/* TITLE */}
               <h3 className="
-          font-serif
-          text-[clamp(4rem,6vw,7.5rem)]
+          font-poppins
+          font-bold
+          text-[32px] sm:text-[56px]
           leading-[0.92]
           tracking-[-0.03em]
         ">
@@ -109,8 +110,8 @@ lg:grid-cols-[1fr_1.3fr]
 
               {/* SUBTITLE */}
               <p className="
-          text-2xl
-          lg:text-3xl
+          font-body
+          text-[16px] md:text-[24px]
           text-zinc-400
           max-w-2xl
           leading-relaxed
@@ -119,30 +120,32 @@ lg:grid-cols-[1fr_1.3fr]
               </p>
 
               {/* TAGS */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="
-                border border-zinc-800
-                px-5 py-2
-                rounded-full
-                text-sm
-                text-zinc-400
-              "
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+           <div className="flex pt-4">
+  {project.tags.map((tag) => (
+    <span
+      key={tag}
+      className="
+        font-body
+        border border-zinc-800
+        px-5 py-2
+        rounded-full
+        text-[12px]
+        text-zinc-400
+      "
+    >
+      {tag}
+    </span>
+  ))}
+</div>
 
               {/* BUTTON */}
               <button className="
+          font-body
           mt-8
           border border-zinc-700
           px-8 py-4
           rounded-full
-          text-sm
+          text-[16px]
           tracking-[0.25em]
           uppercase
           hover:border-white
@@ -154,37 +157,36 @@ lg:grid-cols-[1fr_1.3fr]
             </div>
 
             {/* IMAGE */}
-            <motion.div
-              whileHover={{ scale: 1.04 }}
-              transition={{ duration: 0.45, ease: "easeOut" }}
-              className="
+         <motion.div
+  whileHover={{ scale: 1.04 }}
+  transition={{ duration: 0.45, ease: "easeOut" }}
+  className="
     relative
     w-full
-    aspect-[5/4]
-    lg:aspect-[5/4]
-    overflow-visible
+    h-[520px]        // 👈 FIXED HEIGHT
+    overflow-hidden  // 👈 prevent overflow issues
   "
-            >
-              <div
-                className="
+>
+  <div
+    className="
       relative
-      w-[100%]
-      ml-10
+      w-full
+      h-full          // 👈 fill parent height
       rounded-[3.5rem]
       overflow-hidden
       border border-zinc-900
       shadow-[0_40px_120px_rgba(0,0,0,0.6)]
       bg-zinc-900
     "
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
+  >
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-full object-cover" // 👈 KEY
+      loading="lazy"
+    />
+  </div>
+</motion.div>
 
           </div>
         </motion.section>

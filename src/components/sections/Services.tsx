@@ -188,9 +188,8 @@ const services = [
   {
     id: "01",
     title: "Web Design & Development",
-    subtitle: "Logos, colors, type, your brand, fully alive.",
-    image:
-      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1200",
+    subtitle: "High-performance websites built with Next.js and Tailwind.",
+    image: "/dashboard.jpg",
     tags: [
       "Responsive Design",
       "Interaction Design",
@@ -200,38 +199,35 @@ const services = [
   },
   {
     id: "02",
-    title: "Branding",
-    subtitle: "Creating unique identities that resonate.",
-    image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+    title: "Enterprise Solutions",
+    subtitle: "Scalable dashboards and internal tools for complex workflows.",
+    image: "/admin-management.webp",
     tags: [
-      "Logo Design",
-      "Brand Strategy",
-      "Visual Guidelines",
-      "Identity Systems",
+      "Role-Based Access",
+      "Data Visualization",
+      "API Integration",
+      "Workflow Automation",
     ],
   },
   {
     id: "03",
-    title: "Social Media",
-    subtitle: "Engaging content for modern platforms.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200",
+    title: "Mobile UX Design",
+    subtitle: "Intuitive mobile experiences that delight users.",
+    image: "/qr.webp",
     tags: [
-      "Content Strategy",
-      "Motion Graphics",
-      "Campaign Planning",
-      "Platform Growth",
+      "App Prototyping",
+      "User Research",
+      "Design Systems",
+      "Native Feel",
     ],
   },
-  {
-    id: "04",
-    title: "Motion Design",
-    subtitle: "Bringing interfaces to life with motion.",
-    image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
-    tags: ["UI Animation", "Micro-interactions", "3D Motion", "Video Editing"],
-  },
+  // {
+  //   id: "04",
+  //   title: "Digital Branding",
+  //   subtitle: "Creating unique visual identities that stand out.",
+  //   image: "/bakery.webp",
+  //   tags: ["Logo Design", "Identity Systems", "Visual Strategy", "Guidelines"],
+  // },
 ];
 
 const easing = [0.16, 1, 0.3, 1];
@@ -253,9 +249,9 @@ export function ServicesSection() {
         </span>
       </div>
       <SectionHeading
-        eyebrow="Services"
-        title="Services"
-        description="I leverage industry-leading technologies to build high-performance, visually stunning digital experiences."
+        eyebrow="Capabilities"
+        title="How I Can Help"
+        description="Transforming complex problems into performant digital products."
         align="left"
       />
 
@@ -284,7 +280,6 @@ export function ServicesSection() {
                 key={service.id}
                 layout="position"
                 onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(null)}
                 transition={{
                   layout: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
                 }}
@@ -318,7 +313,7 @@ export function ServicesSection() {
                       height: isActive ? 0 : "auto",
                     }}
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-4xl sm:text-5xl font-bold text-zinc-100 overflow-hidden"
+                    className="text-[24px] sm:text-[32px] font-poppins font-bold text-zinc-100 overflow-hidden"
                   >
                     {service.title}
                   </motion.h4>
@@ -339,23 +334,11 @@ export function ServicesSection() {
                       className="overflow-hidden pb-14"
                     >
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-                        {/* IMAGE */}
-                        <motion.img
-                          src={service.image}
-                          alt={service.title}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.6 }}
-                          className="rounded-2xl w-full"
-                        />
-
                         {/* TEXT SIDE */}
                         <div className="space-y-6">
                           <motion.h4
                             layout
-                            className="text-4xl sm:text-5xl font-bold text-zinc-100"
+                            className="text-[24px] sm:text-[32px] font-poppins font-bold text-zinc-100"
                           >
                             {service.title}
                           </motion.h4>
@@ -365,7 +348,7 @@ export function ServicesSection() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-lg text-zinc-400"
+                            className="font-body text-[16px] md:text-[16px] text-zinc-400"
                           >
                             {service.subtitle}
                           </motion.p>
@@ -381,14 +364,24 @@ export function ServicesSection() {
                                 transition={{
                                   delay: 0.15 + i * 0.05,
                                 }}
-                                className="rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-300"
+                                className="font-body rounded-full border border-zinc-700 px-4 py-2 text-[12px] text-zinc-300"
                               >
                                 {tag}
                               </motion.span>
                             ))}
                           </div>
-
                         </div>
+
+                        {/* IMAGE */}
+                        <motion.img
+                          src={service.image}
+                          alt={service.title}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.6 }}
+                          className="rounded-2xl w-full border border-zinc-800"
+                        />
                       </div>
                     </motion.div>
                   )}
