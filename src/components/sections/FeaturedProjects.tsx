@@ -26,16 +26,16 @@ const projects = [
       "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
     meta: "React · Node.js · MongoDB",
     tags: ["Redux", "Express", "Dynamic Workflows"],
-    image: "/admin-management.webp",
+    image: "/Clinic-management.jpg",
   },
-  {
-    title: "Ad Listing Platform",
-    subtitle:
-      "A full-featured ad listing platform where users can post, browse, and manage advertisements securely.",
-    meta: "Next.js · Tailwind CSS · MongoDB",
-    tags: ["shadcn/ui", "REST API"],
-    image: "/qr.webp",
-  },
+{
+  title: "Code2Pdf",
+  subtitle:
+    "A web app that converts code and files into beautifully formatted PDFs and sends them directly to email and WhatsApp.",
+  meta: "Next.js · Tailwind CSS · Node.js",
+  tags: ["File Uploads", "Email API", "WhatsApp API"],
+  image: "/code2pdf.png", // or your existing preview image
+}
 ];
 
 const cardVariants = {
