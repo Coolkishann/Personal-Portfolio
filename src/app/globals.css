@@ -52,7 +52,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  background: "rgba(0,0,0,0)",
 }
 
 body {
@@ -91,12 +90,15 @@ body {
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 html,

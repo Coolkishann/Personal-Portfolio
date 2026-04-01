@@ -26,7 +26,7 @@ const projects = [
       "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
     meta: "React · Node.js · MongoDB",
     tags: ["Redux", "Express", "Dynamic Workflows"],
-    image: "/Clinic-management.jpg",
+    image: "/Clinic-management.png",
   },
 {
   title: "Code2Pdf",
