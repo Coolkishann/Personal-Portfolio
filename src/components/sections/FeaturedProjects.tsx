@@ -4,14 +4,20 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const projects = [
-  {
-    title: "IT Management Dashboard",
-    subtitle:
-      "A scalable IT service management dashboard for handling internal service requests and operational workflows.",
-    meta: "Next.js · NestJS · PostgreSQL",
-    tags: ["State Management", "Caching", "RBAC"],
-    image: "/dashboard.jpg",
-  },
+{
+  "title": "Distributed URL Shortener",
+  "subtitle": "A scalable load-balanced URL shortener built with microservices architecture, Redis caching, and PostgreSQL for high performance and reliability.",
+  "meta": "Node.js · Fastify · Redis · PostgreSQL · Docker",
+  "tags": ["Load Balancing", "Caching", "Microservices", "System Design", "Scalability"],
+  "image": "/snip.png"  
+},
+ {
+  "title": "IT Management Dashboard",
+  "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
+  "meta": "Next.js · NestJS · PostgreSQL · Prisma · Redis",
+  "tags": ["RBAC", "Caching", "Background Jobs", "Audit Logging"],
+  "image": "/itmanage.png"
+},
   {
   title: "DataEngine (CSV & PDF Processor)",
   subtitle:
@@ -26,7 +32,7 @@ const projects = [
       "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
     meta: "React · Node.js · MongoDB",
     tags: ["Redux", "Express", "Dynamic Workflows"],
-    image: "/Clinic-management.png",
+    image: "/Clinic-management.png"
   },
 {
   title: "Code2Pdf",
