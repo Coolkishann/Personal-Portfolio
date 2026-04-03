@@ -9,14 +9,16 @@ const projects = [
   "subtitle": "A scalable load-balanced URL shortener built with microservices architecture, Redis caching, and PostgreSQL for high performance and reliability.",
   "meta": "Node.js · Fastify · Redis · PostgreSQL · Docker",
   "tags": ["Load Balancing", "Caching", "Microservices", "System Design", "Scalability"],
-  "image": "/snip.png"  
+  "image": "/snip.png",
+  "link":"https://github.com/Coolkishann/Sipy-Url-shortner"
 },
  {
   "title": "IT Management Dashboard",
   "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
   "meta": "Next.js · NestJS · PostgreSQL · Prisma · Redis",
   "tags": ["RBAC", "Caching", "Background Jobs", "Audit Logging"],
-  "image": "/itmanage.png"
+  "image": "/itmanage.png",
+   "link":"https://github.com/Coolkishann/it-client"
 },
   {
   title: "DataEngine (CSV & PDF Processor)",
@@ -25,6 +27,7 @@ const projects = [
   meta: "Node.js · React · MongoDB",
   tags: ["Worker Threads", "WebSockets", "File Processing", "Parallel Computing"],
   image: "/dataengine.jpg",
+    "link":"https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend"
 },
   {
     title: "Clinic Management System",
@@ -32,7 +35,8 @@ const projects = [
       "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
     meta: "React · Node.js · MongoDB",
     tags: ["Redux", "Express", "Dynamic Workflows"],
-    image: "/Clinic-management.png"
+    image: "/Clinic-management.png",
+    "link":"https://admin.alignandthrive.co.in/"
   },
 {
   title: "Code2Pdf",
@@ -41,6 +45,7 @@ const projects = [
   meta: "Next.js · Tailwind CSS · Node.js",
   tags: ["File Uploads", "Email API", "WhatsApp API"],
   image: "/code2pdf.png", // or your existing preview image
+  "link":"https://code2pdf.vercel.app/"
 }
 ];
 
@@ -145,20 +150,28 @@ lg:grid-cols-[1fr_1.3fr]
 </div>
 
               {/* BUTTON */}
-              <button className="
-          font-body
-          mt-8
-          border border-zinc-700
-          px-8 py-4
-          rounded-full
-          text-[16px]
-          tracking-[0.25em]
-          uppercase
-          hover:border-white
-          transition
-        ">
-                View Project →
-              </button>
+         <a 
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button
+    className="
+      font-body
+      mt-8
+      border border-zinc-700
+      px-8 py-4
+      rounded-full
+      text-[16px]
+      tracking-[0.25em]
+      uppercase
+      hover:border-white
+      transition
+    "
+  >
+    View Project →
+  </button>
+</a>
 
             </div>
 
