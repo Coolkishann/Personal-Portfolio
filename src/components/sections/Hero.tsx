@@ -53,7 +53,7 @@ export function HeroSection() {
           {topLine}
         </p>
         <button
-          onClick={() => window.open("https://drive.google.com/file/d/1i9Xe3nDtv6Xzb-oN2gwOCTob2ZMSu0iu/view?usp=drive_link", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/1CzvBY5rHUvHi87kgpvz8ew-15hJq81Ui/view?usp=sharing", "_blank")}
           className="group relative flex items-center gap-3 overflow-hidden rounded-full border border-zinc-800 bg-zinc-950 px-6 py-3 text-xs font-(--font-cta) uppercase tracking-[0.2em] text-zinc-400 transition-all hover:border-zinc-100 hover:text-zinc-100"
         >
           <span className="relative z-10">View resume</span>
