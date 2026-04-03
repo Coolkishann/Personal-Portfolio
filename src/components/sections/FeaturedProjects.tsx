@@ -12,6 +12,14 @@ const projects = [
   "image": "/snip.png",
   "link":"https://github.com/Coolkishann/Sipy-Url-shortner"
 },
+  {
+  "title": "Pretext Typography ASCII",
+  "subtitle": "A high-performance cinematic ASCII engine using proportional variable typography and real-time video sampling, powered by @chenglou/pretext.",
+  "meta": "TypeScript · Canvas · Vite · Pretext",
+  "tags": ["ASCII Art", "Creative Coding", "Typography", "Real-time Rendering", "Experimental"],
+  "image": "/pretext-ascii.png",
+  "link": "https://glyphapple.vercel.app/"
+},
  {
   "title": "IT Management Dashboard",
   "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
@@ -38,15 +46,24 @@ const projects = [
     image: "/Clinic-management.png",
     "link":"https://admin.alignandthrive.co.in/"
   },
-{
-  title: "Code2Pdf",
-  subtitle:
-    "A web app that converts code and files into beautifully formatted PDFs and sends them directly to email and WhatsApp.",
-  meta: "Next.js · Tailwind CSS · Node.js",
-  tags: ["File Uploads", "Email API", "WhatsApp API"],
-  image: "/code2pdf.png", // or your existing preview image
-  "link":"https://code2pdf.vercel.app/"
-}
+  {
+  "title": "Agency Website",
+  "subtitle": "A modern animated agency website built with Next.js featuring smooth GSAP animations, Framer Motion interactions, and responsive TailwindCSS design.",
+  "meta": "Next.js · GSAP · Framer Motion · TailwindCSS · TypeScript",
+  "tags": ["Animations", "Responsive Design", "Modern UI", "Performance", "Frontend"],
+  "image": "/agency.png",
+  "link": "https://agency-website-flax-one.vercel.app/"
+},
+  
+// {
+//   title: "Code2Pdf",
+//   subtitle:
+//     "A web app that converts code and files into beautifully formatted PDFs and sends them directly to email and WhatsApp.",
+//   meta: "Next.js · Tailwind CSS · Node.js",
+//   tags: ["File Uploads", "Email API", "WhatsApp API"],
+//   image: "/code2pdf.png", // or your existing preview image
+//   "link":"https://code2pdf.vercel.app/"
+// }
 ];
 
 const cardVariants = {
