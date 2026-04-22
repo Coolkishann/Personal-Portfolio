@@ -3,40 +3,66 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const projects = [
-{
-  "title": "Distributed URL Shortener",
-  "subtitle": "A scalable load-balanced URL shortener built with microservices architecture, Redis caching, and PostgreSQL for high performance and reliability.",
-  "meta": "Node.js · Fastify · Redis · PostgreSQL · Docker",
-  "tags": ["Load Balancing", "Caching", "Microservices", "System Design", "Scalability"],
-  "image": "/snip.png",
-  "link":"https://github.com/Coolkishann/Sipy-Url-shortner"
-},
+type Project = {
+  title: string;
+  subtitle: string;
+  meta: string;
+  tags: string[];
+  image: string;
+  link?: string;
+  gif?: string;
+};
+
+const projects: Project[] = [
   {
-  "title": "Pretext Typography ASCII",
-  "subtitle": "A high-performance cinematic ASCII engine using proportional variable typography and real-time video sampling, powered by @chenglou/pretext.",
-  "meta": "TypeScript · Canvas · Vite · Pretext",
-  "tags": ["ASCII Art", "Creative Coding", "Typography", "Real-time Rendering", "Experimental"],
-  "image": "/pretext-ascii.png",
-  "link": "https://glyphapple.vercel.app/"
-},
- {
-  "title": "IT Management Dashboard",
-  "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
-  "meta": "Next.js · NestJS · PostgreSQL · Prisma · Redis",
-  "tags": ["RBAC", "Caching", "Background Jobs", "Audit Logging"],
-  "image": "/itmanage.png",
-   "link":"https://github.com/Coolkishann/it-client"
-},
+    "title": "Distributed URL Shortener",
+    "subtitle": "A scalable load-balanced URL shortener built with microservices architecture, Redis caching, and PostgreSQL for high performance and reliability.",
+    "meta": "Node.js · Fastify · Redis · PostgreSQL · Docker",
+    "tags": ["Load Balancing", "Caching", "Microservices", "System Design", "Scalability"],
+    "image": "/snip.png",
+    "link": "https://github.com/Coolkishann/Sipy-Url-shortner"
+  },
   {
-  title: "DataEngine (CSV & PDF Processor)",
-  subtitle:
-    "A high-performance data processing engine that generates and processes large CSV and PDF files using parallel worker threads and real-time telemetry.",
-  meta: "Node.js · React · MongoDB",
-  tags: ["Worker Threads", "WebSockets", "File Processing", "Parallel Computing"],
-  image: "/dataengine.jpg",
-    "link":"https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend"
-},
+    "title": "Three.js GSAP Scroll",
+    "subtitle": "An immersive scroll-based 3D web experience combining Three.js rendering with GSAP animations for smooth cinematic transitions and interactive storytelling.",
+    "meta": "Three.js · GSAP · ScrollTrigger · Vercel · WebGL",
+    "tags": [
+      "Three.js",
+      "GSAP",
+      "Scroll Animation",
+      "3D Experience",
+      "Interactive Website"
+    ],
+    "gif": "/threejs-gsap-scroll.gif",
+    "image": "/threejs-gsap-scroll.png",
+    "link": "https://threejs-gsap-scroll.vercel.app/"
+  },
+  {
+    "title": "Pretext Typography ASCII",
+    "subtitle": "A high-performance cinematic ASCII engine using proportional variable typography and real-time video sampling, powered by @chenglou/pretext.",
+    "meta": "TypeScript · Canvas · Vite · Pretext",
+    "tags": ["ASCII Art", "Creative Coding", "Typography", "Real-time Rendering", "Experimental"],
+    "image": "/pretext-ascii.png",
+    "gif": "/demo.gif",
+    "link": "https://glyphapple.vercel.app/"
+  },
+  {
+    "title": "IT Management Dashboard",
+    "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
+    "meta": "Next.js · NestJS · PostgreSQL · Prisma · Redis",
+    "tags": ["RBAC", "Caching", "Background Jobs", "Audit Logging"],
+    "image": "/itmanage.png",
+    "link": "https://github.com/Coolkishann/it-client"
+  },
+  {
+    title: "DataEngine (CSV & PDF Processor)",
+    subtitle:
+      "A high-performance data processing engine that generates and processes large CSV and PDF files using parallel worker threads and real-time telemetry.",
+    meta: "Node.js · React · MongoDB",
+    tags: ["Worker Threads", "WebSockets", "File Processing", "Parallel Computing"],
+    image: "/dataengine.jpg",
+    "link": "https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend"
+  },
   {
     title: "Clinic Management System",
     subtitle:
@@ -44,26 +70,27 @@ const projects = [
     meta: "React · Node.js · MongoDB",
     tags: ["Redux", "Express", "Dynamic Workflows"],
     image: "/Clinic-management.png",
-    "link":"https://admin.alignandthrive.co.in/"
+    "link": "https://admin.alignandthrive.co.in/"
   },
   {
-  "title": "Agency Website",
-  "subtitle": "A modern animated agency website built with Next.js featuring smooth GSAP animations, Framer Motion interactions, and responsive TailwindCSS design.",
-  "meta": "Next.js · GSAP · Framer Motion · TailwindCSS · TypeScript",
-  "tags": ["Animations", "Responsive Design", "Modern UI", "Performance", "Frontend"],
-  "image": "/agency.png",
-  "link": "https://agency-website-flax-one.vercel.app/"
-},
-  
-// {
-//   title: "Code2Pdf",
-//   subtitle:
-//     "A web app that converts code and files into beautifully formatted PDFs and sends them directly to email and WhatsApp.",
-//   meta: "Next.js · Tailwind CSS · Node.js",
-//   tags: ["File Uploads", "Email API", "WhatsApp API"],
-//   image: "/code2pdf.png", // or your existing preview image
-//   "link":"https://code2pdf.vercel.app/"
-// }
+    "title": "Agency Website",
+    "subtitle": "A modern animated agency website built with Next.js featuring smooth GSAP animations, Framer Motion interactions, and responsive TailwindCSS design.",
+    "meta": "Next.js · GSAP · Framer Motion · TailwindCSS · TypeScript",
+    "tags": ["Animations", "Responsive Design", "Modern UI", "Performance", "Frontend"],
+    "image": "/agency.png",
+    "gif": "/agency.mp4",
+    "link": "https://agency-website-flax-one.vercel.app/"
+  },
+
+  // {
+  //   title: "Code2Pdf",
+  //   subtitle:
+  //     "A web app that converts code and files into beautifully formatted PDFs and sends them directly to email and WhatsApp.",
+  //   meta: "Next.js · Tailwind CSS · Node.js",
+  //   tags: ["File Uploads", "Email API", "WhatsApp API"],
+  //   image: "/code2pdf.png", // or your existing preview image
+  //   "link":"https://code2pdf.vercel.app/"
+  // }
 ];
 
 const cardVariants = {
@@ -148,11 +175,11 @@ lg:grid-cols-[1fr_1.3fr]
               </p>
 
               {/* TAGS */}
-           <div className="flex pt-4">
-  {project.tags.map((tag) => (
-    <span
-      key={tag}
-      className="
+              <div className="flex pt-4">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="
         font-body
         border border-zinc-800
         px-5 py-2
@@ -160,20 +187,20 @@ lg:grid-cols-[1fr_1.3fr]
         text-[12px]
         text-zinc-400
       "
-    >
-      {tag}
-    </span>
-  ))}
-</div>
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
               {/* BUTTON */}
-         <a 
-  href={project.link}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button
-    className="
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  className="
       font-body
       mt-8
       border border-zinc-700
@@ -185,26 +212,26 @@ lg:grid-cols-[1fr_1.3fr]
       hover:border-white
       transition
     "
-  >
-    View Project →
-  </button>
-</a>
+                >
+                  View Project →
+                </button>
+              </a>
 
             </div>
 
             {/* IMAGE */}
-         <motion.div
-  whileHover={{ scale: 1.04 }}
-  transition={{ duration: 0.45, ease: "easeOut" }}
-  className="
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="
     relative
     w-full
     h-[520px]        // 👈 FIXED HEIGHT
     overflow-hidden  // 👈 prevent overflow issues
   "
->
-  <div
-    className="
+            >
+              <div
+                className="
       relative
       w-full
       h-full          // 👈 fill parent height
@@ -214,15 +241,15 @@ lg:grid-cols-[1fr_1.3fr]
       shadow-[0_40px_120px_rgba(0,0,0,0.6)]
       bg-zinc-900
     "
-  >
-    <img
-      src={project.image}
-      alt={project.title}
-      className="w-full h-full object-cover" // 👈 KEY
-      loading="lazy"
-    />
-  </div>
-</motion.div>
+              >
+                <img
+                  src={project.gif || project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover" // 👈 KEY
+                  loading={project.gif ? undefined : "lazy"}
+                />
+              </div>
+            </motion.div>
 
           </div>
         </motion.section>
