@@ -241,12 +241,23 @@ lg:grid-cols-[1fr_1.3fr]
       bg-zinc-900
     "
               >
-                <img
-                  src={project.gif || project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain" // 👈 KEY
-                  loading={project.gif ? undefined : "lazy"}
-                />
+                {project.gif?.match(/\.(mp4|webm)$/i) ? (
+                  <video
+                    src={project.gif}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={project.gif || project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover" // 👈 KEY
+                    loading={project.gif ? undefined : "lazy"}
+                  />
+                )}
               </div>
             </motion.div>
 
