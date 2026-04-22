@@ -81,7 +81,6 @@ const projects: Project[] = [
     "gif": "/agency.mp4",
     "link": "https://agency-website-flax-one.vercel.app/"
   },
-
   // {
   //   title: "Code2Pdf",
   //   subtitle:
@@ -245,7 +244,7 @@ lg:grid-cols-[1fr_1.3fr]
                 <img
                   src={project.gif || project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover" // 👈 KEY
+                  className="w-full h-full object-contain" // 👈 KEY
                   loading={project.gif ? undefined : "lazy"}
                 />
               </div>
