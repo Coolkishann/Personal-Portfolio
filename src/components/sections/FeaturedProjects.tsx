@@ -33,7 +33,7 @@ const projects: Project[] = [
       "3D Experience",
       "Interactive Website"
     ],
-    "gif": "/threejs-gsap-scroll.gif",
+    "gif": "/threejs.mp4",
     "image": "/threejs-gsap-scroll.png",
     "link": "https://threejs-gsap-scroll.vercel.app/"
   },
@@ -42,7 +42,7 @@ const projects: Project[] = [
   "subtitle": "A high-end visual storytelling platform featuring immersive scroll-triggered animations, smooth cinematic transitions, and an interactive 3D-like skills visualization.",
   "meta": "Next.js · GSAP · TypeScript · Vanilla CSS · Framer Motion",
   "tags": ["Animation", "ScrollTrigger", "Visual Storytelling", "Premium UX", "Frontend Engineering"],
-  "gif":"/threejs.mp4",
+  "gif":"/studio-gsap.mp4",
   "image": "/studio-gsap.png",
   "link": "https://studio-gsap.vercel.app"
 },
