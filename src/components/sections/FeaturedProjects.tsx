@@ -38,6 +38,15 @@ const projects: Project[] = [
     "link": "https://threejs-gsap-scroll.vercel.app/"
   },
   {
+  "title": "Cinematic Studio Portfolio",
+  "subtitle": "A high-end visual storytelling platform featuring immersive scroll-triggered animations, smooth cinematic transitions, and an interactive 3D-like skills visualization.",
+  "meta": "Next.js · GSAP · TypeScript · Vanilla CSS · Framer Motion",
+  "tags": ["Animation", "ScrollTrigger", "Visual Storytelling", "Premium UX", "Frontend Engineering"],
+  "gif":"/threejs.mp4",
+  "image": "/studio-gsap.png",
+  "link": "https://studio-gsap.vercel.app"
+},
+  {
     "title": "Pretext Typography ASCII",
     "subtitle": "A high-performance cinematic ASCII engine using proportional variable typography and real-time video sampling, powered by @chenglou/pretext.",
     "meta": "TypeScript · Canvas · Vite · Pretext",
