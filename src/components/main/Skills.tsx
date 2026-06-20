@@ -6,11 +6,11 @@ import { FC } from 'react'
 import { useLanguage } from '@/components/language-provider'
 
 const SKILLS_LIST =
-  'js,ts,python,cpp,go,rust,react,nextjs,nodejs,express,django,spring,graphql,fastapi,postgres,mongodb,redis,mysql,elasticsearch,rabbitmq,kafka,aws,gcp,cloudflare,docker,kubernetes,terraform,git,githubactions,jenkins,ansible,nginx,prometheus,grafana,linux,bash,postman,bun'
+  'js,ts,python,react,nextjs,nodejs,express,graphql,postgres,mongodb,redis,mysql,gcp,cloudflare,docker,git,githubactions,bash,postman'
 
 // Curated core stack on mobile (24 = 3 rows of 8) so each icon renders larger
 const SKILLS_LIST_MOBILE =
-  'js,ts,python,go,react,nextjs,nodejs,graphql,postgres,mongodb,redis,kafka,aws,gcp,cloudflare,docker,kubernetes,terraform,git,githubactions,nginx,linux,bash,grafana'
+  'js,ts,python,react,nextjs,nodejs,express,graphql,postgres,mongodb,redis,mysql,gcp,cloudflare,docker,git,githubactions,bash,postman'
 
 const SKILLICONS_URL_MOBILE = `https://skillicons.dev/icons?i=${SKILLS_LIST_MOBILE}&perline=8`
 const SKILLICONS_URL_DESKTOP = `https://skillicons.dev/icons?i=${SKILLS_LIST}&perline=19`
@@ -21,7 +21,7 @@ export const Skills: FC = () => {
   return (
     <section id="skills" className="relative w-full bg-background transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-10">
           {/* Section Header on Border Line */}
@@ -50,14 +50,14 @@ export const Skills: FC = () => {
             <img
               src={SKILLICONS_URL_DESKTOP}
               alt="Tech Stack"
-              width="100%"
+              width="120%"
               className="hidden min-[880px]:block w-full h-auto"
               loading="lazy"
             />
           </motion.div>
         </div>
 
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </section>
   )

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { FC, useState } from 'react'
+import Link from 'next/link'
 import { projectsData, Project } from '@/constants'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { Plus, Minus, Terminal, ShieldAlert, Cpu, Award } from 'lucide-react'
@@ -77,16 +78,13 @@ export const Projects: FC = () => {
     return null
   }
 
-  // Only display the 4 high-quality engineering projects (remove simple ones)
-  const premiumProjects = projectsData.filter(p => 
-    ['deeptab', 'snappy pro', 'shopxindia', 'socialpedia'].includes(p.title.toLowerCase())
-  )
+  const premiumProjects = projectsData
 
   return (
     <section id="projects" className="relative w-full bg-background transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         {/* Content Cell */}
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-12">
@@ -116,15 +114,15 @@ export const Projects: FC = () => {
                     className="w-full text-left py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 focus:outline-none cursor-pointer"
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`size-10 border rounded-lg shrink-0 mt-0.5 overflow-hidden transition-all duration-300 flex items-center justify-center ${
-                        isExpanded 
-                          ? 'border-brand-blue/30 shadow-[0_0_15px_rgba(59,130,246,0.15)]' 
-                          : 'border-border'
-                      }`}>
+                      <div className={`size-10 border rounded-lg shrink-0 mt-0.5 overflow-hidden transition-all duration-300 flex items-center justify-center ${isExpanded
+                        ? 'border-brand-blue/30 shadow-[0_0_15px_rgba(59,130,246,0.15)]'
+                        : 'border-border'
+                        }`}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src={project.title.toLowerCase() === 'snappy pro' ? '/snappy-logo.png' : `/${project.title.toLowerCase().replace(' ', '-')}-logo.png`}
-                          alt={`${project.title} logo`}
+                          src={project.image}
+                          // src={project.title.toLowerCase() === 'snappy pro' ? '/snappy-logo.png' : `/${project.title.toLowerCase().replace(/\s+/g, '-')}-logo.png`}
+                          alt={`${project.image} logo`}
                           className={`size-full object-cover scale-[1.35] transition-all duration-300 ${isExpanded ? 'scale-[1.45]' : 'opacity-95 group-hover:opacity-100 group-hover:scale-[1.45]'}`}
                         />
                       </div>
@@ -171,10 +169,10 @@ export const Projects: FC = () => {
                         className="overflow-hidden"
                       >
                         <div className="pb-8 pl-0 sm:pl-14 pr-2 space-y-6">
-                          
+
                           {/* Case Study Two-Column Layout */}
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            
+
                             {/* Left Column: Problem & Approach */}
                             <div className="space-y-4">
                               <div className="space-y-1.5">
@@ -277,10 +275,21 @@ export const Projects: FC = () => {
               )
             })}
           </div>
+
+          {/* View All Link */}
+          <div className="flex justify-center py-6">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors group"
+            >
+              <span>View All Projects</span>
+              <span className="transition-transform group-hover:translate-x-0.5">→</span>
+            </Link>
+          </div>
         </div>
 
         {/* Right Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </section>
   )

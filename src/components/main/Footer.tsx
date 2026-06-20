@@ -59,7 +59,7 @@ export const Footer: FC = () => {
     <footer className="relative w-full bg-background text-foreground transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         {/* Content Cell */}
         <div className="border-x border-border min-[880px]:border-x-0">
@@ -98,11 +98,10 @@ export const Footer: FC = () => {
                       playKeystroke('standard')
                       setLanguage(lang)
                     }}
-                    className={`relative px-3 py-1 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider transition-colors duration-300 select-none ${
-                      isActive
+                    className={`relative px-3 py-1 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider transition-colors duration-300 select-none ${isActive
                         ? 'text-white dark:text-white'
                         : 'text-muted-foreground hover:text-foreground'
-                    }`}
+                      }`}
                   >
                     {isActive && (
                       <motion.span
@@ -160,7 +159,7 @@ export const Footer: FC = () => {
         </div>
 
         {/* Right Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </footer>
   )

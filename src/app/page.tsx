@@ -7,13 +7,14 @@ import Skills from '@/components/main/Skills'
 import Timeline from '@/components/main/Timeline'
 import GithubActivity from '@/components/main/GithubActivity'
 import { Toaster } from 'react-hot-toast'
+import AiSkills from '@/components/main/AiSkills'
 
 const SectionDivider = () => (
   <div className="w-full border-b border-border bg-muted/5 h-4">
     <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full h-full">
-      <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border h-full" />
+      <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border h-full" />
       <div className="border-x border-border min-[880px]:border-x-0 h-full" />
-      <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border h-full" />
+      <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border h-full" />
     </div>
   </div>
 )
@@ -25,16 +26,18 @@ export default function Home() {
       <SectionDivider />
       <Skills />
       <SectionDivider />
-      <GithubActivity />
+      <AiSkills />
       <SectionDivider />
+      {/* <GithubActivity /> */}
+      {/* <SectionDivider /> */}
       <ResumeSection />
       <SectionDivider />
       <Timeline />
       <SectionDivider />
       <Projects />
       <SectionDivider />
-      <BlogsSection />
-      <SectionDivider />
+      {/* <BlogsSection /> */}
+      {/* <SectionDivider /> */}
       <ContactUs />
       <SectionDivider />
       <Toaster position="bottom-right" />

@@ -76,7 +76,7 @@ export const ContactUs: FC = () => {
     <section id="contact" className="relative w-full bg-background transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         {/* Content Cell */}
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-12">
@@ -105,7 +105,7 @@ export const ContactUs: FC = () => {
               <div className="space-y-4">
                 {/* Email */}
                 <a
-                  href="mailto:chaudharyashlok@gmail.com"
+                  href="mailto:kishanvishwakarma6414@gmail.com"
                   className="group flex items-start gap-3 hover:translate-x-0.5 transition-transform duration-200"
                 >
                   <div className="shrink-0 mt-0.5 text-foreground">
@@ -113,7 +113,7 @@ export const ContactUs: FC = () => {
                   </div>
                   <div>
                     <span className="block text-sm font-medium text-foreground/90 group-hover:text-brand-blue transition-colors">
-                      chaudharyashlok@gmail.com
+                      kishanvishwakarma6414@gmail.com
                     </span>
                     <span className="block text-[11px] text-muted-foreground/70 mt-0.5">
                       {{
@@ -127,7 +127,7 @@ export const ContactUs: FC = () => {
 
                 {/* Phone */}
                 <a
-                  href="tel:+917767012860"
+                  href="tel:+918530209965"
                   className="group flex items-start gap-3 hover:translate-x-0.5 transition-transform duration-200"
                 >
                   <div className="shrink-0 mt-0.5 text-foreground">
@@ -135,7 +135,7 @@ export const ContactUs: FC = () => {
                   </div>
                   <div>
                     <span className="block text-sm font-medium text-foreground/90 group-hover:text-brand-blue transition-colors">
-                      +91 77670 12860
+                      +91 85302 09965
                     </span>
                     <span className="block text-[11px] text-muted-foreground/70 mt-0.5">
                       {{
@@ -283,11 +283,10 @@ export const ContactUs: FC = () => {
               </button>
 
               {status && (
-                <div className={`p-3 rounded text-center text-xs font-medium ${
-                  status.includes('DELIVERED')
-                    ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
-                    : 'bg-destructive/10 border border-destructive/20 text-destructive'
-                }`}>
+                <div className={`p-3 rounded text-center text-xs font-medium ${status.includes('DELIVERED')
+                  ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
+                  : 'bg-destructive/10 border border-destructive/20 text-destructive'
+                  }`}>
                   {status.includes('DELIVERED') ? `✓ ${t.contact.success}` : t.contact.error}
                 </div>
               )}
@@ -296,7 +295,7 @@ export const ContactUs: FC = () => {
         </div>
 
         {/* Right Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </section>
   )

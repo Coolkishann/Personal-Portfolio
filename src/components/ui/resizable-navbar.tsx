@@ -238,14 +238,14 @@ export const NavbarLogo = ({ isScrolled }: { isScrolled: boolean }) => {
     >
       <Image
         src="/ashlok.jpg"
-        alt="Ashlok Chaudhary"
+        alt="Kishan Vishwakarma"
         width={32}
         height={32}
         className="rounded-full"
       />
       {!isScrolled && (
         <span className="text-lg font-bold group-hover:text-red-500 transition-colors">
-          Ashlok Chaudhary
+          Kishan Vishwakarma
         </span>
       )}
     </a>

@@ -56,7 +56,7 @@ const HeroContent: FC = () => {
         className="flex flex-col items-center justify-between gap-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
       >
         <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-          Ashlok Chaudhary
+          Kishan Vishwakarma
         </span>
         <PointerHighlight rectangleClassName="rounded-none">
           <span className="text-primary p-3 text-3xl lg:text-6xl">Full-Stack Developer</span>

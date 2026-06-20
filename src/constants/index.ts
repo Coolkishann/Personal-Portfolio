@@ -3,7 +3,7 @@ export interface Skill {
   Image: string
   width: number
   height: number
-  category: 'frontend' | 'backend' | 'database' | 'devops' | 'other'
+  category: 'ai' | 'design' | 'ai' | 'frontend' | 'backend' | 'database' | 'devops' | 'other'
 }
 
 export const skills: Skill[] = [
@@ -23,6 +23,8 @@ export const skills: Skill[] = [
   { skill_name: 'Spring Boot', Image: '/spring-boot.png', width: 55, height: 55, category: 'backend' },
   { skill_name: 'Rust', Image: '/rust.png', width: 70, height: 70, category: 'backend' },
   { skill_name: 'Go', Image: '/go.png', width: 60, height: 60, category: 'backend' },
+  { skill_name: 'nestjs', Image: '/nestjs.png', width: 60, height: 60, category: 'backend' },
+  { skill_name: 'RestApi', Image: '/restapi.png', width: 60, height: 60, category: 'backend' },
 
   // Database
   { skill_name: 'PostgreSQL', Image: '/postger.png', width: 70, height: 70, category: 'database' },
@@ -36,6 +38,24 @@ export const skills: Skill[] = [
   { skill_name: 'Kubernetes', Image: '/kubernetes.png', width: 50, height: 50, category: 'devops' },
   { skill_name: 'AWS', Image: '/aws.png', width: 70, height: 70, category: 'devops' },
   { skill_name: 'CloudFlare', Image: '/cloudflare.png', width: 80, height: 80, category: 'devops' },
+
+  { skill_name: 'claude', Image: '/claude.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'gemini', Image: '/gemini.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'stitch', Image: '/stitch.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'chatgpt', Image: '/chatgpt.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'perplexity', Image: '/perplexity.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'bolt', Image: '/bolt.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'lovable', Image: '/lovable.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'antigravity', Image: '/antigravity.png', width: 80, height: 80, category: 'ai' },
+  { skill_name: 'omni', Image: '/omni.png', width: 80, height: 80, category: 'ai' },
+
+  { skill_name: 'webflow', Image: '/webflow.png', width: 80, height: 80, category: 'design' },
+  { skill_name: 'awwwards', Image: '/awwwards.png', width: 80, height: 80, category: 'design' },
+  { skill_name: 'dribbble', Image: '/dribbble.png', width: 80, height: 80, category: 'design' },
+
+  { skill_name: 'gsap', Image: '/gsap.png', width: 80, height: 80, category: 'frontend' },
+  { skill_name: 'threejs', Image: '/threejs.png', width: 80, height: 80, category: 'frontend' },
+  { skill_name: 'barbajs', Image: '/barbajs.png', width: 80, height: 80, category: 'frontend' },
 ]
 
 export interface SocialLink {
@@ -47,12 +67,12 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    href: 'https://github.com/Ashlok2003',
+    href: 'https://github.com/coolkishann',
     label: 'GitHub',
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ashlok2003/',
+    href: 'https://www.linkedin.com/in/kishanvishwakarma1406/',
     label: 'LinkedIn',
   },
   {
@@ -76,55 +96,29 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     id: 0,
-    role: 'Backend Developer Intern',
-    company: 'OpenLeaf',
+    role: 'Mern Stack Developer',
+    company: 'CodesStudios',
     location: 'Onsite - Mumbai, Maharashtra',
-    date: 'Mar 2026 - Present',
+    date: 'Jul 2025 - Present',
     description:
-      'Building high-performance backend services for a B2B/B2C logistics management platform that delivers end-to-end purchase order automation and supply chain orchestration across enterprise retail channels.',
+      'Built and maintained full-stack web applications end-to-end across a modern TypeScript stack — Next.js, NestJS, and Turborepo — taking ownership of features from technical design through production deployment, with a focus on clean architecture, data integrity, and measurable performance gains.',
     achievements: [
-      'Developed distributed PO automation pipelines in Go handling multi-channel order ingestion from platforms like Blinkit, Swiggy Instamart, and Zepto.',
-      'Engineered PostgreSQL-backed inventory sync services with Redis caching to handle real-time warehouse stock updates at low latency.',
-      'Built RESTful and event-driven Node.js microservices for B2B appointment scheduling, NDR tracking, and carrier webhook processing.',
-      'Implemented role-based access control (Admin, Warehouse, Seller) with JWT auth middleware across the multi-tenant dashboard API.',
-      'Optimized SQL query plans on large order tables (10M+ rows), reducing reporting query time by over 60% via composite indexing and materialized views.',
+      "Owned end-to-end delivery of full-stack product features, from requirement breakdown and technical planning to production rollout",
+      "Engineered scalable frontend experiences with Next.js, React.js, and Tailwind CSS, improving usability, responsiveness, and maintainability",
+      "Modeled and optimized data layers across MongoDB and PostgreSQL using Prisma, improving query efficiency, reliability, and operational simplicity",
+      "Integrated Redis caching to reduce response times by 30% on frequently accessed services in a real-time IT service management dashboard",
+      "Structured a scalable monorepo using Turborepo, streamlining shared code, build pipelines, and cross-package dependency management",
+      "Supported production systems, resolved live issues quickly, and improved service reliability through debugging and iterative performance tuning"
     ],
-    tags: ['Go', 'Node.js', 'PostgreSQL', 'Redis', 'REST APIs', 'Microservices', 'B2B Logistics'],
+    tags: ['Nextjs', 'Node.js', 'PostgreSQL', 'Redis', 'RestApi', 'mongodb', 'NestJs'],
   },
-  {
-    id: 1,
-    role: 'Backend Developer Intern',
-    company: 'WhatBytes',
-    location: 'Remote',
-    date: 'Sep 2025 - Mar 2026',
-    description: 'Designed and implemented scalable backend systems, LLM integrations, and automated analytics pipelines.',
-    achievements: [
-      'Engineered a comprehensive ad analytics flow and LinkedIn ads scraper, enabling automated data extraction and deep performance insights.',
-      'Built robust media processing pipelines integrated with OpenAI Whisper for automated audio/video transcription and analysis.',
-      'Integrated LLMs and OpenSearch to power advanced semantic search and AI-driven data processing capabilities.',
-      'Architected and deployed end-to-end CI/CD pipelines to automate testing and deployments, ensuring high reliability.',
-    ],
-    tags: ['Django', 'Python', 'LLMs', 'OpenSearch', 'OpenAI Whisper', 'CI/CD', 'Web Scraping'],
-  },
-  {
-    id: 2,
-    role: 'Full Stack Developer Intern',
-    company: 'Talent Corner HR Services',
-    location: 'Onsite - Mumbai, Maharashtra',
-    date: 'Apr 2025 - Jul 2025',
-    description: 'Engineered high-performance lead management and data scraping pipelines.',
-    achievements: [
-      'Engineered a scalable lead management and verification platform using Node.js and MySQL, streamlining data enrichment pipelines.',
-      'Developed intuitive, reusable dashboard modules in React, delivering real-time business metrics and actionable analytics.',
-      'Implemented a clean, modular architecture using controller-service-repository patterns to ensure high maintainability.',
-      'Set up CI/CD pipelines to automate the build, test, and deployment processes, accelerating feature delivery.',
-    ],
-    tags: ['Node.js', 'MySQL', 'React', 'Data Scraping', 'Clean Architecture', 'CI/CD'],
-  },
+
+
 ]
 
 export interface Project {
   title: string
+  image: string
   description: string
   date: string
   problem: string
@@ -139,84 +133,109 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: 'Deeptab',
-    description: 'Context-aware, low-latency AI tab completion engine for VS Code streaming code suggestions.',
-    date: '06.2026',
-    problem: 'Commercial tools are closed-source and lock users into specific models, pricing, and context collection pipelines.',
-    approach: 'Designed a provider-agnostic completion loop with SSE streaming, local state replay, and continuation prediction.',
-    infra: 'TypeScript · VS Code Extension API · SSE Streaming · OpenRouter / Groq / Fireworks APIs',
-    challenge: 'Achieving sub-200ms keystroke-to-response latency while managing asynchronous cancellation states in the editor.',
-    outcome: 'Built a lightweight, extensible extension supporting pluggable models, keys, and local config reactive states.',
-    github: 'https://github.com/Ashlok2003/deeptab',
-    live: 'https://github.com/Ashlok2003/deeptab',
-    tags: ['TypeScript', 'VS Code API', 'SSE', 'LLMs', 'OpenRouter'],
+    title: 'Distributed URL Shortener',
+    image: "/url.png",
+    description:
+      'A scalable load-balanced URL shortener built with microservices architecture, Redis caching, and PostgreSQL for high performance and reliability.',
+    date: '06.2025',
+    problem:
+      'Traditional URL shorteners struggle with scalability, fault tolerance, and low-latency redirection under high traffic.',
+    approach:
+      'Designed a distributed architecture with load balancing, Redis caching, and PostgreSQL-backed persistence.',
+    infra:
+      'Node.js · Fastify · Redis · PostgreSQL · Docker',
+    challenge:
+      'Maintaining fast redirect performance while ensuring consistency across distributed services.',
+    outcome:
+      'Built a highly scalable URL shortening platform capable of handling large traffic volumes with efficient caching.',
+    github: 'https://github.com/Coolkishann/Sipy-Url-shortner',
+    live: 'https://github.com/Coolkishann/Sipy-Url-shortner',
+    tags: ['Load Balancing', 'Caching', 'Microservices', 'System Design', 'Scalability'],
   },
   {
-    title: 'Snappy Pro',
-    description: 'High-fidelity developer-grade Chrome Extension for screen capture, recording, and interactive canvas annotations.',
-    date: '02.2026',
-    problem: 'Standard browser capture tools lack developer utilities like annotation overlays, filters, and light/color curve adjustments.',
-    approach: 'Leveraged Chrome Extension messaging architecture and HTML5 Canvas API for real-time rendering and recording.',
-    infra: 'JavaScript · Chrome Extension APIs · Canvas API · WebRTC (Tab Capture)',
-    challenge: 'Maintaining high capture frame rates and synchronization while applying interactive filters and animations.',
-    outcome: 'Delivered an intuitive extension with full-page screenshot capture, annotations, real-time filters, and image exports.',
-    github: 'https://github.com/Ashlok2003/Snappy',
-    live: 'https://github.com/Ashlok2003/Snappy',
-    tags: ['JavaScript', 'Chrome Extension API', 'Canvas API', 'WebRTC'],
+    title: 'DataEngine (CSV & PDF Processor)',
+    image: "/fileflows.png",
+    description:
+      'A high-performance data processing engine capable of generating and processing large CSV and PDF datasets.',
+    date: '02.2025',
+    problem:
+      'Large-scale file generation and processing tasks become slow and resource-intensive in single-threaded environments.',
+    approach:
+      'Utilized worker threads and WebSocket telemetry for parallelized processing and monitoring.',
+    infra:
+      'Node.js · React · MongoDB',
+    challenge:
+      'Efficiently distributing workloads while maintaining real-time progress tracking.',
+    outcome:
+      'Achieved scalable parallel processing with live telemetry and improved throughput.',
+    github:
+      'https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend',
+    live:
+      'https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend',
+    tags: ['Worker Threads', 'WebSockets', 'File Processing', 'Parallel Computing'],
   },
   {
-    title: 'ShopXIndia',
-    description: 'A microservices-based e-commerce platform built on AWS Fargate with full container observability.',
-    date: '02.2024',
-    problem: 'Monolithic commerce systems couple deployment boundaries and complicate backend scaling.',
-    approach: 'Designed domain-bounded microservices unified behind a federated GraphQL gateway.',
-    infra: 'AWS ECS Fargate · RDS · ElastiCache · CloudFront · Cognito · S3 · CodePipeline',
-    challenge: 'Resolving service discovery and securing token propagation across the federated service mesh.',
-    outcome: 'Decoupled services into isolated, auto-scaling deploy units sharing a single typed API schema.',
-    github: 'https://github.com/Ashlok2003/ShopxIndia',
-    live: 'https://github.com/Ashlok2003/ShopxIndia',
-    tags: ['Go', 'GraphQL', 'AWS ECS', 'Fargate', 'Docker', 'PostgreSQL'],
-  },
-  {
-    title: 'SocialPedia',
-    description: 'MERN stack social connection platform incorporating real-time messaging and media calls.',
-    date: '04.2025',
-    problem: 'Syncing live user presence status and chat history with low frontend layout jitter.',
-    approach: 'Integrated WebSockets for persistent user messaging and WebRTC for direct audio/video streams.',
-    infra: 'React · Node.js · Express · MongoDB · Socket.io · WebRTC · Redux Toolkit',
-    challenge: 'Handling websocket connection drops gracefully and managing signaling servers.',
-    outcome: 'Supports concurrent message broadcasts under 80ms latency and high-fidelity media connection.',
-    github: 'https://github.com/Ashlok2003/Socialpedia',
-    live: 'https://socialpedia-tau.vercel.app/',
-    tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'WebRTC', 'Redux'],
-  },
-  {
-    title: 'FileShareX',
-    description: 'Direct secure file sharing app providing instant download codes and QR generators.',
+    title: 'IT Management Dashboard',
+    image: "/inventree.png",
+    description:
+      'Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.',
     date: '03.2025',
-    problem: 'Sharing large files securely without forcing users to register or pay storage fees.',
-    approach: 'Created automatic expiring uploads mapped to one-time token access codes.',
-    infra: 'React · Node.js · MongoDB · Express · Nodemailer (SMTP) · QR-code API',
-    challenge: 'Preventing disk space exhaustion on local servers while handling concurrent uploads.',
-    outcome: 'Fully automated cleanups of expired files with direct file encryption.',
-    github: 'https://github.com/Ashlok2003/File-Sharer',
-    live: 'https://file-sharer-sepia.vercel.app/',
-    tags: ['React', 'Node.js', 'MongoDB', 'SMTP', 'File APIs'],
+    problem:
+      'Managing IT assets and service workflows across teams often lacks visibility and automation.',
+    approach:
+      'Developed a full-stack platform with RBAC, caching, audit logs, and automated operational workflows.',
+    infra:
+      'Next.js · NestJS · PostgreSQL · Prisma · Redis',
+    challenge:
+      'Handling complex permissions, background processing, and scalable data access patterns.',
+    outcome:
+      'Delivered a centralized IT operations dashboard improving visibility and workflow efficiency.',
+    github: 'https://github.com/Coolkishann/it-client',
+    live: 'https://github.com/Coolkishann/it-client',
+    tags: ['RBAC', 'Caching', 'Background Jobs', 'Audit Logging'],
+  },
+
+  {
+    title: 'Moto Edge 60 Fusion Showcase',
+    image: "/motorola.png",
+    description:
+      'An Apple-style cinematic product showcase for the Moto Edge 60 Fusion featuring scroll-driven storytelling, immersive motion design, and premium visual presentation inspired by modern device launch pages.',
+    date: '06.2026',
+    problem:
+      'Traditional product landing pages often fail to communicate hardware design, premium feel, and feature highlights in a memorable interactive way.',
+    approach:
+      'Designed a scroll-synced storytelling experience combining pinned sections, cinematic transitions, feature reveals, and Apple-inspired minimal layouts to showcase the device as a premium digital product experience.',
+    infra:
+      'Next.js · TypeScript · GSAP · ScrollTrigger · Framer Motion · ThreeJs · 3D Model',
+    challenge:
+      'Balancing heavy visual storytelling and smooth scroll-linked animations while keeping the experience performant, responsive, and visually clean across devices.',
+    outcome:
+      'Built a polished interactive product microsite that highlights the Edge 60 Fusion’s display, camera, charging, and design language through immersive motion and premium presentation.',
+    github: 'https://github.com/Coolkishann/edge-60-fusion-showcase', // replace if different
+    live: 'https://edge-60-fusion-showcase.vercel.app/',
+    tags: ['GSAP', 'ScrollTrigger', 'Product Showcase', 'Motion Design', 'Premium UI'],
   },
   {
-    title: 'Scheduly.AI',
-    description: 'Conversational scheduler client using AI agents to manage calendars.',
-    date: '12.2024',
-    problem: 'Traditional booking forms require multi-step calendars, leading to high abandonment rates.',
-    approach: 'Leveraged natural language processing to extract availability choices and confirm bookings.',
-    infra: 'React · Node.js · OpenRouter API · Google Calendar API · TailwindCSS',
-    challenge: 'Converting ambiguous text (e.g. "next Monday afternoon") into accurate ISO dates.',
-    outcome: 'Booking completes inside a single conversational window synced instantly to Google Calendar.',
-    github: 'https://github.com/Ashlok2003/Scheduly.AI',
-    live: 'https://scheduly-ai-client.onrender.com/',
-    tags: ['React', 'Node.js', 'OpenAI API', 'Google Calendar API'],
+    title: 'Cinematic Studio Portfolio',
+    image: "/cinematic.png",
+    description:
+      'A premium visual storytelling platform featuring immersive scroll-triggered animations and interactive experiences.',
+    date: '05.2025',
+    problem:
+      'Traditional portfolios fail to showcase frontend engineering and design capabilities in an engaging way.',
+    approach:
+      'Built a cinematic scrolling experience using GSAP, Framer Motion, and carefully orchestrated transitions.',
+    infra:
+      'Next.js · GSAP · TypeScript · Vanilla CSS · Framer Motion',
+    challenge:
+      'Balancing visual richness with performance and responsiveness across screen sizes.',
+    outcome:
+      'Created a polished portfolio experience highlighting advanced frontend engineering and UX craftsmanship.',
+    github: 'https://studio-gsap.vercel.app',
+    live: 'https://studio-gsap.vercel.app',
+    tags: ['Animation', 'ScrollTrigger', 'Visual Storytelling', 'Premium UX', 'Frontend Engineering'],
   },
-]
+];
 
 export interface Blog {
   id: number

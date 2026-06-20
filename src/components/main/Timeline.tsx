@@ -58,6 +58,8 @@ const getIconKey = (tag: string): string => {
   if (t === 'nginx') return 'nginx'
   if (t === 'cpp' || t === 'c++') return 'cpp'
   if (t === 'fastapi') return 'fastapi'
+  if (t === 'nestjs') return 'nestjs'
+  if (t === 'restapi') return 'restapi'
   return ''
 }
 
@@ -81,7 +83,7 @@ export const Timeline: FC = () => {
     <section id="experience" className="relative w-full bg-background transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left margin diagonal stripes */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         {/* Content Container */}
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-10">
@@ -192,7 +194,7 @@ export const Timeline: FC = () => {
                                   {iconKey && (
                                     // eslint-disable-next-line @next/next/no-img-element
                                     <img
-                                      src={`https://skillicons.dev/icons?i=${iconKey}`}
+                                      src={iconKey === 'restapi' ? '/RestApi.png' : `https://skillicons.dev/icons?i=${iconKey}`}
                                       alt={tag}
                                       className="w-3.5 h-3.5 object-contain"
                                       loading="lazy"
@@ -214,7 +216,7 @@ export const Timeline: FC = () => {
         </div>
 
         {/* Right margin diagonal stripes */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </section>
   )

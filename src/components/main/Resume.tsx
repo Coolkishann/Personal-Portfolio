@@ -46,7 +46,7 @@ export const ResumeSection: FC = () => {
     <section id="resume" className="relative w-full bg-background transition-colors">
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
 
         {/* Content Cell */}
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-10 flex flex-col items-center">
@@ -95,7 +95,7 @@ export const ResumeSection: FC = () => {
         </div>
 
         {/* Right Margin */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border" />
       </div>
     </section>
   )

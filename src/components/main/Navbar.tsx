@@ -24,20 +24,23 @@ export function Navbar() {
   }, [])
 
   const navItems = [
-    { name: t.nav.about, link: '#about' },
-    { name: t.nav.experience, link: '#experience' },
-    { name: t.nav.projects, link: '#projects' },
-    { name: t.nav.blogs, link: '#blogs' },
-    { name: t.nav.contact, link: '#contact' },
+    { name: t.nav.about, link: '/#about' },
+    { name: t.nav.experience, link: '/#experience' },
+    { name: t.nav.projects, link: '/projects' },
+    // { name: t.nav.blogs, link: '/#blogs' },
+    { name: t.nav.contact, link: '/#contact' },
   ]
 
   const handleNavClick = (link: string) => {
     playKeystroke('standard')
     setIsOpen(false)
-    const element = document.querySelector(link)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (link.startsWith('#')) {
+      const element = document.querySelector(link)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
+    // Route links (/projects etc.) are handled by Next.js Link href
   }
 
   const toggleLang = (lang: Language) => {
@@ -50,7 +53,7 @@ export function Navbar() {
       {/* 3-Column Grid bounded within max-width container */}
       <div className="max-w-[880px] mx-auto grid grid-cols-1 min-[880px]:grid-cols-[40px_800px_40px] w-full">
         {/* Left Margin Stripe Cell */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border/80" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border/80" />
 
         {/* Content Cell */}
         <div className="relative border-x border-border min-[880px]:border-x-0 px-6 py-3.5 flex items-center justify-between">
@@ -65,8 +68,8 @@ export function Navbar() {
               <div className="absolute -inset-1.5 bg-gradient-to-r from-brand-blue/30 to-violet-600/30 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500" />
               <div className="relative size-8 rounded-full border border-border/80 overflow-hidden flex items-center justify-center bg-muted">
                 <Image
-                  src="/ashlok.jpg"
-                  alt="Ashlok Chaudhary"
+                  src="/kishan.jpg"
+                  alt="Kishan Vishwakarma"
                   width={32}
                   height={32}
                   className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -74,9 +77,9 @@ export function Navbar() {
                 />
               </div>
             </Link>
-            
+
             {/* Desktop Navigation Links with sliding backdrop pill */}
-            <nav 
+            <nav
               className="hidden min-[880px]:flex items-center gap-1.5"
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -86,12 +89,13 @@ export function Navbar() {
                   href={item.link}
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onClick={(e) => {
-                    e.preventDefault()
+                    if (item.link.startsWith('#')) {
+                      e.preventDefault()
+                    }
                     handleNavClick(item.link)
                   }}
-                  className={`relative px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-200 ${
-                    hoveredIndex === idx ? 'text-foreground' : 'text-muted-foreground/80 hover:text-foreground'
-                  }`}
+                  className={`relative px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-200 ${hoveredIndex === idx ? 'text-foreground' : 'text-muted-foreground/80 hover:text-foreground'
+                    }`}
                 >
                   <span className="relative z-10">{item.name}</span>
                   {hoveredIndex === idx && (
@@ -123,7 +127,7 @@ export function Navbar() {
 
             {/* GitHub Repo link - Desktop Only */}
             <a
-              href="https://github.com/Ashlok2003/portfolio"
+              href="https://github.com/coolkishann"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => playKeystroke('standard')}
@@ -184,7 +188,7 @@ export function Navbar() {
         </div>
 
         {/* Right Margin Stripe Cell */}
-        <div className="hidden min-[880px]:block bg-diagonal-stripes border-x border-border/80" />
+        <div className="hidden min-[880px]:block bg-diagonal-stripes-animated border-x border-border/80" />
       </div>
 
       {/* Mobile Menu Panel dropdown */}
@@ -204,7 +208,9 @@ export function Navbar() {
                   key={`mobile-nav-${item.name}`}
                   href={item.link}
                   onClick={(e) => {
-                    e.preventDefault()
+                    if (item.link.startsWith('#')) {
+                      e.preventDefault()
+                    }
                     handleNavClick(item.link)
                   }}
                   className="text-[12px] font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors py-2.5 border-b border-border/40 last:border-b-0"
@@ -237,11 +243,10 @@ export function Navbar() {
                     <button
                       key={`mobile-lang-${lang}`}
                       onClick={() => toggleLang(lang)}
-                      className={`py-1.5 rounded-full font-mono text-[10px] font-bold transition-all ${
-                        language === lang
-                          ? 'bg-black dark:bg-brand-blue text-white shadow-sm'
-                          : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
-                      }`}
+                      className={`py-1.5 rounded-full font-mono text-[10px] font-bold transition-all ${language === lang
+                        ? 'bg-black dark:bg-brand-blue text-white shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
+                        }`}
                     >
                       {lang === 'en' ? 'English' : lang === 'hi' ? 'हिन्दी' : '日本語'}
                     </button>
