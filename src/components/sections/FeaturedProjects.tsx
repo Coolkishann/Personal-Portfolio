@@ -56,14 +56,6 @@ const projects: Project[] = [
     "link": "https://glyphapple.vercel.app/"
   },
   {
-    "title": "IT Management Dashboard",
-    "subtitle": "Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.",
-    "meta": "Next.js · NestJS · PostgreSQL · Prisma · Redis",
-    "tags": ["RBAC", "Caching", "Background Jobs", "Audit Logging"],
-    "image": "/itmanage.png",
-    "link": "https://github.com/Coolkishann/it-client"
-  },
-  {
     title: "DataEngine (CSV & PDF Processor)",
     subtitle:
       "A high-performance data processing engine that generates and processes large CSV and PDF files using parallel worker threads and real-time telemetry.",
@@ -71,15 +63,6 @@ const projects: Project[] = [
     tags: ["Worker Threads", "WebSockets", "File Processing", "Parallel Computing"],
     image: "/dataengine.jpg",
     "link": "https://github.com/Coolkishann/PDF-CSV-Processor-Generator----Backend"
-  },
-  {
-    title: "Clinic Management System",
-    subtitle:
-      "A full-stack clinic management system with appointment scheduling, billing, and role-based access control.",
-    meta: "React · Node.js · MongoDB",
-    tags: ["Redux", "Express", "Dynamic Workflows"],
-    image: "/Clinic-management.png",
-    "link": "https://admin.alignandthrive.co.in/"
   },
   {
     "title": "Agency Website",
